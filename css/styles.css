@@ -1,0 +1,59 @@
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  margin: 0;
+}
+
+main {
+  margin: 0 auto;
+}
+
+.bike__container {
+  border: 3px solid black;
+  border-radius: 10px;
+  box-shadow: 3px 3px 5px black;
+}
+
+.inside__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bike__name {
+  font-size: 40px;
+}
+
+.buttons {
+  gap: 20px;
+  padding: 20px;
+}
+
+button {
+  padding: 8px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2em;
+  background-color: #5c8166;
+  color : white;
+}
+
+.button__shadow {
+  box-shadow: 0 5px 5px black;
+}
+
+button:active {
+  transform: translateY(3px);
+}
+
+button.button__shadow:active {
+  box-shadow: none;
+}
+
+footer {
+  margin-top: auto;
+  height: 50px;
+  text-align: center;
+}
