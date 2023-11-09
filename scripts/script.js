@@ -15,6 +15,35 @@ let isAnimatingReverse = false;
 let timeoutId;
 let timeoutIdReverse;
 
+let clicked = false;
+
+document.addEventListener('DOMContentLoaded', function() {
+  var delayTime = 3000;
+
+  function showPopup() {
+    if (!clicked) {
+      $('#popup').css('display', 'flex');
+    }
+  }
+
+  setTimeout(showPopup, delayTime);
+
+
+  document.getElementById('startButton').addEventListener('click', function() {
+    clicked = true;
+    $('#popup').css('display', 'none');
+  });
+
+  document.getElementById('reverseButton').addEventListener('click', function() {
+    clicked = true;
+    $('#popup').css('display', 'none');
+  });
+});
+
+$('#closeButton').on('click', function() {
+  $('#popup').css('display', 'none');
+});
+
 function animateBike() {
   counter++;
   if (counter > 34)
